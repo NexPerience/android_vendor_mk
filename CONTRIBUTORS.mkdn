@@ -1,3 +1,18 @@
+XPerience
+===========
+Maintener TeamMEX
+
+* XPeria x8
+* XPERIA GO
+* XPERIA U
+* Nexus 7
+* Note II
+* LG P880
+
+
+
+
+
 CyanogenMod
 ===========
 
@@ -101,13 +116,13 @@ Translators:
 * __Chinese (Simplified):__ Andrew Jiang, John Hsing, Engle Mars
 * __Chinese (Traditional):__ Li Chi Tung, Fu-Chun Hsu
 * __Czech:__ Ondrej Zima, Radovan Kepak, Pavel Kucera, Jozka Jozin, Jiri Silvarich, Vaclav Moucha
-* __Danish:__ Jacob Overgaard Madsen, Morten Jørgensen, Henning Nielsen Lund, Mikael Jepsen
+* __Danish:__ Jacob Overgaard Madsen, Morten Jï¿½rgensen, Henning Nielsen Lund, Mikael Jepsen
 * __Dutch:__ Marco Brohet, Kasper Hettinga, Eddy Witkamp
 * __Finnish:__ Niko Koivu
-* __French:__ Delphin PETER, Eric Mourougandy, Léo Colombaro, Florent Imfloflo, Tanguy Pruvot, Matthias Bosc
-* __German:__ Kim Lê, Jacob Müller, Christoph Quiter, Markus Hoeber, Danny Baumann
+* __French:__ Delphin PETER, Eric Mourougandy, Lï¿½o Colombaro, Florent Imfloflo, Tanguy Pruvot, Matthias Bosc
+* __German:__ Kim Lï¿½, Jacob Mï¿½ller, Christoph Quiter, Markus Hoeber, Danny Baumann
 * __Greek:__ Michael Bestas, Vasilis Akritas
-* __Hungarian:__ Tamás Tóth, Dávid László, Dániel Buga
+* __Hungarian:__ Tamï¿½s Tï¿½th, Dï¿½vid Lï¿½szlï¿½, Dï¿½niel Buga
 * __Italian:__ Francesco Foresta, Mauro Bazzano
 * __Japanese:__ Takuo Kitame, Taichi Nishimura
 * __Norwegian:__ Odin Ugedal, Arne Coucheron
@@ -115,5 +130,5 @@ Translators:
 * __Portuguese (Brazilian):__ Gustavo Rosa, Pedro Carneiro, Emerson Pinter
 * __Russian:__ Pavel Volkov, Vladislav Koldobskiy, Vladimir Belkov
 * __Slovak:__ Dusan Kazik
-* __Spanish:__ Jorge Ruesga, Lorenzo M. Castaño
-* __Swedish:__ Simon Bäck, Ted Lundwall, Esa Laukkanen, Björn Lundén
+* __Spanish:__ Jorge Ruesga, Lorenzo M. Castaï¿½o
+* __Swedish:__ Simon Bï¿½ck, Ted Lundwall, Esa Laukkanen, Bjï¿½rn Lundï¿½n
