@@ -2,7 +2,7 @@ PRODUCT_BRAND ?= mokee
 
 -include vendor/cm-priv/keys.mk
 SUPERUSER_EMBEDDED := true
-SUPERUSER_PACKAGE_PREFIX := com.android.settings.cyanogenmod.superuser
+SUPERUSER_PACKAGE_PREFIX := com.android.settings.XPerience.superuser
 
 # To deal with CM9 specifications
 # TODO: remove once all devices have been switched
@@ -53,6 +53,8 @@ PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
 PRODUCT_PROPERTY_OVERRIDES += \
     keyguard.no_require_sim=true \
+    ro.product.locale.language=en \
+    ro.product.locale.region=EN \
     ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
     ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
     ro.com.google.clientidbase=android-google \
@@ -84,6 +86,7 @@ PRODUCT_COPY_FILES += \
 # init.d support
 PRODUCT_COPY_FILES += \
     vendor/mk/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
+    vendor/mk/prebuilt/common//etc/init.d/00su:system/etc/init.d/00su \
     vendor/mk/prebuilt/common/bin/sysinit:system/bin/sysinit
 
 # userinit support
@@ -101,16 +104,8 @@ PRODUCT_COPY_FILES += \
 # MoKee-specific init file
 PRODUCT_COPY_FILES += \
     vendor/mk/prebuilt/common/app/GoogleIME.apk:system/app/GoogleIME.apk \
-    vendor/mk/prebuilt/common/app/iFlyIME.apk:system/app/iFlyIME.apk \
-    vendor/mk/prebuilt/common/app/MarketExt.apk:system/app/MarketExt.apk \
-    vendor/mk/prebuilt/common/app/MoKeeMarket.apk:system/app/MoKeeMarket.apk \
     vendor/mk/prebuilt/common/lib/libpush-socket.so:system/lib/libpush-socket.so \
-    vendor/mk/prebuilt/common/lib/libmsc-v7.so:system/lib/libmsc-v7.so \
-    vendor/mk/prebuilt/common/lib/libsmartaiwrite-jni-v5.so:system/lib/libsmartaiwrite-jni-v5.so \
-    vendor/mk/prebuilt/common/lib/libsmartaiwrite-jni-v6.so:system/lib/libsmartaiwrite-jni-v6.so \
-    vendor/mk/prebuilt/common/lib/libsmartaiwrite-jni-v7.so:system/lib/libsmartaiwrite-jni-v7.so \
-    vendor/mk/prebuilt/common/lib/libsmartaiwrite-jni-v8.so:system/lib/libsmartaiwrite-jni-v8.so \
-    vendor/mk/prebuilt/common/lib/libvadLib-v5.so:system/lib/libvadLib-v5.so \
+  vendor/mk/prebuilt/xpe/OTA.apk:system/app/OTA.apk \
     vendor/mk/prebuilt/common/lib/libjni_unbundled_latinimegoogle.so:system/lib/libjni_unbundled_latinimegoogle.so
 
 # Compcache/Zram support
@@ -145,6 +140,7 @@ include vendor/mk/config/themes_common.mk
 # Required MK packages
 PRODUCT_PACKAGES += \
     Camera \
+    Focal \
     Development \
     Superuser \
     BluetoothExt \
@@ -256,14 +252,18 @@ else
     MK_EXTRAVERSION :=
 endif
 
+XPerience_counter = 56
+
 ifdef MK_RELEASE
     MK_VERSION := MK$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(MK_BUILD)-$(shell date +%y%m%d)-RELEASE
 else
-    MK_VERSION := MK$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(MK_BUILD)-$(shell date +%Y%m%d%H%M)-$(MK_BUILDTYPE)
+     MK_VERSION := MK$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(MK_BUILD)-$(shell date +%Y%m%d)-$(shell date +%H%M%S)-$(MK_BUILDTYPE)-RELEASE.N°-$(XPerience_counter)
 endif
+
 
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.mk.support=bbs.mfunz.com \
+  ro.xpe.dev=klozz-jesus \
   ro.mk.version=$(MK_VERSION) \
   ro.modversion=$(MK_VERSION)
 
